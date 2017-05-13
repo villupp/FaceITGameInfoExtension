@@ -1,0 +1,10 @@
+<div ng-if="(isCurrentUserInMatch || isCurrentUserAdmin || isCurrentUserMatchAdmin) &amp;&amp; match.gameData.matchroom.instructions"
+    class="match-vs__details__bottom"> <span translate="IN-CASE-OF-FPS-DROPS" translate-values="{&quot;game_config&quot;:&quot;quickmatch_config&quot;,&quot;server&quot;:{&quot;ip&quot;:&quot;46.166.189.22&quot;,&quot;port&quot;:&quot;27017&quot;,&quot;country&quot;:&quot;Netherlands&quot;,&quot;link&quot;:&quot;steam://connect/46.166.189.22:27017&quot;,&quot;active&quot;:true,&quot;user_ingame_id&quot;:&quot;76561197987259213&quot;,&quot;game_steam_id&quot;:&quot;730&quot;,&quot;clipboard&quot;:{&quot;text&quot;:&quot;connect 46.166.189.22:27017&quot;}}}"
+        class="btn-block" translate-compile=""><span>In case of FPS drops open console and type:</span></span>
+    <!---->
+    <div ng-if="serverConnectData.active" class="mt-md"> <span select-text="" class="drop-text-hide btn-block">connect 46.166.189.22:27017</span><br> <span translate-once="CLIPBOARD">Copy to clipboard</span>:
+        <i class="icon-clipboard_icon btn btn-just-icon btn-gray-light clipboard-button clipboard-button-custom-margin ng-isolate-scope btn-sm"
+            ng-class="{'icon-ic_check_generic': iconClipboardDone}" type="button" clipboard="" on-copied="iconClipboardDone = true"
+            text="serverConnectData.clipboard.text"></i> </div>
+    <!---->
+</div>

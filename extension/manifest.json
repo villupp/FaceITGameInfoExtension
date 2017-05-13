@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "FaceIT Match Info",
+  "description": "Sends FaceIT match info to a REST API",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.faceit.com/en/csgo/room/*"
+      ],
+      "js": [
+        "jquery.js",
+        "script.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["jquery.js", "requestor.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "storage",
+    "http://*/" 
+  ]
+}
