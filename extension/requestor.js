@@ -1,8 +1,8 @@
 var options = (function () {
     return {
         debugEnabled: false,
-        svcUrl: 'http://192.168.0.14:8080/api/sendMessage',
-        channelId: "219436014412759050",
+        svcUrl: 'http://:/api/sendMessage',
+        channelId: "",
         authHeader: ''
     }
 })();
